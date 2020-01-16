@@ -1,15 +1,15 @@
 // ssh, don't tell anyone, but the main file is actually generated
 
-const generate = (max = 1000, operators = ["+", "-", "*", "/", "%"]) => {
+const generate = (min = 1, max = 1000, operators = ["+", "-", "*", "/", "%"]) => {
     let output = "function calculate(a, b, o) {\n    ";
     
     for (const op of operators) {
-        for (let i = 0; i <= max; i++) {
-            for (let j = 0; j <= max; j++) {
+        for (let i = min; i <= max; i++) {
+            for (let j = min; j <= max; j++) {
                 output += `if (o === ${op} && a === ${i} && b === ${j}) return ${i} ${op} ${j};\n\n    `;
             }
         }
     }
     
-    output = output.slice(0, -4) + "}";
+    output += "return 0;\n}";
 };
