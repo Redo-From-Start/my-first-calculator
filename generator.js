@@ -11,5 +11,5 @@ const generate = (max = 1000, operators = ["+", "-", "*", "/", "%"]) => {
         }
     }
     
-    output = output.substring(0, -4) + "}";
+    output = output.slice(0, -4) + "}";
 };
