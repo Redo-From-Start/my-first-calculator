@@ -6,7 +6,7 @@ const generate = (max = 1000, operators = ["+", "-", "*", "/", "%"]) => {
     for (const op of operators) {
         for (let i = 0; i <= max; i++) {
             for (let j = 0; j <= max; j++) {
-                output += `if (o === ${op} && a === ${i} && b === ${i}) return ${a} ${op} ${b};\n\n    `;
+                output += `if (o === ${op} && a === ${i} && b === ${j}) return ${i} ${op} ${j};\n\n    `;
             }
         }
     }
