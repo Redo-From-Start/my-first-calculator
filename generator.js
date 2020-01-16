@@ -12,4 +12,5 @@ const generate = (min = 1, max = 1000, operators = ["+", "-", "*", "/", "%"]) =>
     }
     
     output += "return 0;\n}";
+    return output;
 };
